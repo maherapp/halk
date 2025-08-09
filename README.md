@@ -4,14 +4,14 @@ Another npm package.
 
 ## Installation
 ```bash
-npm install @ibnmaher/halk
-```
+npm install halk
+halk```
 
 ## Usage
 
 ```typescript
 import { halk } from '@ibnmaher/halk'
-
+halkhalk
 console.log(halk()) // "Hello from halk!"
 ```
 
