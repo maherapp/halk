@@ -1,5 +1,5 @@
 {
-    "name": "halk",
+    "name": "@ibnmaher/halk",
     "version": "0.0.0",
     "description": "Another npm package",
     "type": "module",
