@@ -1,18 +1,18 @@
-# pugg
+# halk
 
 Another npm package.
 
 ## Installation
 ```bash
-npm install pugg
+npm install halk
 ```
 
 ## Usage
 
 ```typescript
-import { pugg } from 'pugg'
+import { halk } from 'halk'
 
-console.log(pugg()) // "Hello from pugg!"
+console.log(halk()) // "Hello from halk!"
 ```
 
 ## Development

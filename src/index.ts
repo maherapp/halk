@@ -1,3 +1,3 @@
-export function pugg(): string {
-  return 'Hello from pugg!'
+export function halk(): string {
+    return "Hello from halk!";
 }

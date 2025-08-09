@@ -1,27 +1,27 @@
 {
-  "name": "pugg",
-  "version": "0.0.0",
-  "description": "Another npm package",
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "prepublishOnly": "npm run build",
-    "test": "npm run build && node --test dist/*.test.js",
-    "test:watch": "npm run build && node --test --watch dist/*.test.js",
-    "test:coverage": "npm run build && node --test --experimental-test-coverage dist/*.test.js"
-  },
-  "files": [
-    "dist"
-  ],
-  "keywords": [
-    "pugg"
-  ],
-  "author": "Mohammed Maher",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^24.2.0",
-    "typescript": "^5.6.3"
-  }
+    "name": "halk",
+    "version": "0.0.0",
+    "description": "Another npm package",
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "prepublishOnly": "npm run build",
+        "test": "npm run build && node --test dist/*.test.js",
+        "test:watch": "npm run build && node --test --watch dist/*.test.js",
+        "test:coverage": "npm run build && node --test --experimental-test-coverage dist/*.test.js"
+    },
+    "files": [
+        "dist"
+    ],
+    "keywords": [
+        "halk"
+    ],
+    "author": "Mohammed Maher",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^24.2.0",
+        "typescript": "^5.6.3"
+    }
 }
