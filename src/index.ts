@@ -1,3 +1,3 @@
-export function halk(): string {
-    return "Hello from halk!";
-}
+import { halk } from './halk'
+import { Commands } from './types'
+export { halk, Commands }

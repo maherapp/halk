@@ -1,24 +1,37 @@
 # Halk
 
-Another npm package.
+A minimal CLI for electron.
 
 ## Installation
 ```bash
-npm install halk
+npm install @ibnmaher/halk
+```
+
+For CLI usage:
+
+```bash
+npm install -g @ibnmaher/halk
 ```
 
 ## Usage
 
 ```typescript
-import { halk } from '@ibnmaher/halk'
-console.log(halk()) // "Hello from halk!"
+import { halk, Commands } from '@ibnmaher/halk'
+halk(Commands.New, 'my-app')
+```
+
+## CLI
+
+```bash
+halk new my-app
+# All operations had been completed successfully
 ```
 
 ## Development
 
 ### Testing
 
-This project uses Node.js built-in test runner. Run tests with:
+This project uses vitest. Run tests with:
 
 ```bash
 # Run all tests
