@@ -10,7 +10,7 @@
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "lib": ["ES2020"],
-    "types": ["vitest/globals"],
+    "types": ["vitest/globals", "@types/node"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
