@@ -3,13 +3,7 @@ import tsPlugin from '@rollup/plugin-typescript'
 
 export default defineConfig({
   input: 'src/cli.ts',
-  output: [
-    {
-      file: 'dist/cli.cjs',
-      format: 'cjs',
-    },
-    { file: 'dist/cli.js', format: 'esm' },
-  ],
+  output: [{ file: 'dist/cli.js', format: 'esm' }],
   plugins: [
     tsPlugin({
       declaration: false,

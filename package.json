@@ -1,11 +1,11 @@
 {
   "name": "@ibnmaher/halk",
   "version": "0.0.1",
-  "description": "Another npm package",
+  "description": "A minimal CLI for electron",
   "type": "module",
   "main": "./dist/index.js",
   "bin": {
-    "halk": "./dist/cli.cjs"
+    "halk": "./dist/cli.js"
   },
   "repository": {
     "type": "git",
