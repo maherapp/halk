@@ -7,6 +7,10 @@
   "bin": {
     "halk": "./dist/cli.cjs"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maherapp/halk"
+  },
   "publishConfig": {
     "access": "public"
   },
