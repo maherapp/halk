@@ -1,6 +1,6 @@
 {
   "name": "@ibnmaher/halk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A minimal CLI for electron",
   "type": "module",
   "main": "./dist/index.js",

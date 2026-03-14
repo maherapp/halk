@@ -14,7 +14,7 @@ describe('CLI entrypoint', () => {
   it('runs when executed directly', async () => {
     const halkMock = vi.fn().mockResolvedValue(undefined)
 
-    vi.doMock('@/utils/is-executed', () => ({ isExecuted: () => true }))
+    vi.doMock('@/utils/is-executed', () => ({ isExecuted: async () => true }))
     vi.doMock('@/halk', () => ({ halk: halkMock }))
 
     const exitSpy = vi
@@ -36,7 +36,7 @@ describe('CLI entrypoint', () => {
   it('should does nothing when not executed directly', async () => {
     const halkMock = vi.fn().mockResolvedValue(undefined)
 
-    vi.doMock('@/utils/is-executed', () => ({ isExecuted: () => false }))
+    vi.doMock('@/utils/is-executed', () => ({ isExecuted: async () => false }))
     vi.doMock('@/halk', () => ({ halk: halkMock }))
 
     const exitSpy = vi

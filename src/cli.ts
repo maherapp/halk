@@ -19,4 +19,7 @@ export const runCli = async (
   return 0
 }
 
-if (isExecuted()) runCli(process.argv.slice(2)).then(process.exit)
+isExecuted().then(
+  (isExecuted) =>
+    isExecuted && runCli(process.argv.slice(2)).then(process.exit),
+)

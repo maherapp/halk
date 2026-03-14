@@ -13,22 +13,22 @@ describe('Testing isExecuted utility', () => {
     process.argv = [...originalArgv]
   })
 
-  it('should return true when argv[1] points to the executing module path', () => {
+  it('should return true when argv[1] points to the executing module path', async () => {
     process.argv[1] = fileURLToPath(
       new URL('../utils/is-executed.ts', import.meta.url),
     )
-    expect(isExecuted()).toBe(true)
+    expect(await isExecuted()).toBe(true)
   })
 
-  it('should return false when argv[1] points to another path', () => {
+  it('should return false when argv[1] points to another path', async () => {
     process.argv[1] = fileURLToPath(
       new URL('./is-executed.test.ts', import.meta.url),
     )
-    expect(isExecuted()).toBe(false)
+    expect(await isExecuted()).toBe(false)
   })
 
-  it('should return false when argv[1] is missing', () => {
+  it('should return false when argv[1] is missing', async () => {
     process.argv = [process.argv[0] ?? 'node']
-    expect(isExecuted()).toBe(false)
+    expect(await isExecuted()).toBe(false)
   })
 })
