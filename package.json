@@ -1,54 +1,57 @@
 {
-  "name": "@ibnmaher/halk",
-  "version": "0.0.3",
-  "description": "A minimal CLI for electron",
-  "type": "module",
-  "main": "./dist/index.js",
-  "bin": {
-    "halk": "./dist/cli.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/maherapp/halk"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "check-types": "tsc --noEmit",
-    "changeset": "changeset",
-    "changeset:version": "changeset version",
-    "changeset:publish": "changeset publish",
-    "prebuild": "rimraf -rf dist",
-    "build": "concurrently \"npm:build:lib\" \"npm:build:type\"",
-    "build:lib": "rollup --config rollup.config.ts --configPlugin typescript",
-    "build:type": "tsc --project tsconfig.build.json",
-    "cli": "npm run build && node dist/cli.js",
-    "prepublishOnly": "npm run build",
-    "test": "vitest",
-    "test:watch": "vitest watch",
-    "test:coverage": "vitest --coverage"
-  },
-  "files": [
-    "dist"
-  ],
-  "keywords": [
-    "halk"
-  ],
-  "author": "Mohammed Maher",
-  "license": "MIT",
-  "devDependencies": {
-    "@changesets/cli": "^2.30.0",
-    "@rollup/plugin-typescript": "^12.3.0",
-    "@types/node": "^24.12.0",
-    "@vitest/coverage-v8": "^4.0.18",
-    "concurrently": "^9.2.1",
-    "cross-env": "^10.1.0",
-    "rimraf": "^6.1.3",
-    "rollup": "^4.59.0",
-    "tslib": "^2.8.1",
-    "typescript": "^5.6.3",
-    "vitest": "^4.0.18"
-  }
+	"name": "@ibnmaher/halk",
+	"version": "0.0.3",
+	"description": "A minimal CLI for electron",
+	"type": "module",
+	"main": "./dist/index.js",
+	"bin": {
+		"halk": "./dist/cli.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/maherapp/halk"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"types": "./dist/index.d.ts",
+	"scripts": {
+		"check-types": "tsc --noEmit",
+		"lint": "biome check",
+		"format": "biome check --write",
+		"changeset": "changeset",
+		"changeset:version": "changeset version",
+		"changeset:publish": "changeset publish",
+		"prebuild": "rimraf -rf dist",
+		"build": "concurrently \"npm:build:lib\" \"npm:build:type\"",
+		"build:lib": "rollup --config rollup.config.ts --configPlugin typescript",
+		"build:type": "tsc --project tsconfig.build.json",
+		"cli": "npm run build && node dist/cli.js",
+		"prepublishOnly": "npm run build",
+		"test": "vitest",
+		"test:watch": "vitest watch",
+		"test:coverage": "vitest --coverage"
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"halk"
+	],
+	"author": "Mohammed Maher",
+	"license": "MIT",
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.7",
+		"@changesets/cli": "^2.30.0",
+		"@rollup/plugin-typescript": "^12.3.0",
+		"@types/node": "^24.12.0",
+		"@vitest/coverage-v8": "^4.0.18",
+		"concurrently": "^9.2.1",
+		"cross-env": "^10.1.0",
+		"rimraf": "^6.1.3",
+		"rollup": "^4.59.0",
+		"tslib": "^2.8.1",
+		"typescript": "^5.6.3",
+		"vitest": "^4.0.18"
+	}
 }

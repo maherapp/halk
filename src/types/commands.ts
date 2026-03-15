@@ -1,3 +1,3 @@
 export enum Commands {
-  New = 'new',
+	New = "new",
 }
